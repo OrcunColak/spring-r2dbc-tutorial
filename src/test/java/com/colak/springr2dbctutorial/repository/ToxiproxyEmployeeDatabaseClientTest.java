@@ -128,6 +128,7 @@ class ToxiproxyEmployeeDatabaseClientTest {
     @Test
     void withConnectionDown() throws IOException {
         // Downstream means the direction from server to the client
+
         postgresqlProxy.toxics().bandwidth("postgres-cut-connection-downstream", ToxicDirection.DOWNSTREAM, 0);
         postgresqlProxy.toxics().bandwidth("postgres-cut-connection-upstream", ToxicDirection.UPSTREAM, 0);
         Flux<Employee> flux = employeeDatabaseClientRepository

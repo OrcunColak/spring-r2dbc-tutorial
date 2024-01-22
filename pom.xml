@@ -67,17 +67,23 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Test Containers -->
+
+
+        <!--Required for @ServiceConnection annotation-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-testcontainers</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--Required for @Container annotation-->
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Test Containers -->
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>r2dbc</artifactId>
