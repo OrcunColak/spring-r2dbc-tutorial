@@ -11,3 +11,8 @@ The original idea is from
 https://medium.com/@temanovikov/r2dbc-vs-jdbc-vs-vert-x-not-so-fast-benchmark-c0a9fcabb274  
 and
 https://github.com/artemik/r2dbc-jdbc-vertx-issue-190/blob/main/server-webflux-r2dbc-benchmark/src/main/java/org/example/BenchmarkService.java
+
+# Toxiproxy
+The original idea is from  
+https://www.atomicjar.com/2023/03/developing-resilient-applications-with-toxiproxy-and-testcontainers/
+
