@@ -16,3 +16,6 @@ https://github.com/artemik/r2dbc-jdbc-vertx-issue-190/blob/main/server-webflux-r
 The original idea is from  
 https://www.atomicjar.com/2023/03/developing-resilient-applications-with-toxiproxy-and-testcontainers/
 
+# Parameterized Test
+The original idea is from  
+https://medium.com/@mbanaee61/comprehensive-guide-to-dynamic-and-reactive-testing-in-junit-with-parameterizedtest-and-csvsource-e2800e2ee11e
