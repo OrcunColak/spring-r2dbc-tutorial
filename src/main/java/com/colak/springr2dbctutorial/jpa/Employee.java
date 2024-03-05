@@ -10,6 +10,9 @@ import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+/**
+ * When using Natural Ids implement Persistable to tell the repository whether the object is a new or existing one.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

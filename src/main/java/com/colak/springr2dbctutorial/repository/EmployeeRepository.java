@@ -8,5 +8,5 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface EmployeeRepository extends R2dbcRepository<Employee, Integer> {
 
-    public Flux<Employee> findByFirstNameContains(String name);
+    Flux<Employee> findByFirstNameContains(String name);
 }

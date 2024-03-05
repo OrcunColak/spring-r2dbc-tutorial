@@ -34,6 +34,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ToxiproxyEmployeeDatabaseClientTest {
     private static final Network network = Network.newNetwork();
 
+    @SuppressWarnings("resource")
     @Container
     //  @ServiceConnection
     private static final PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15-alpine")

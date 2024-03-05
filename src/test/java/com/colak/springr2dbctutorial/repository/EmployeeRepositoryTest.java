@@ -56,9 +56,12 @@ class EmployeeRepositoryTest {
         employee.setId(5);
         employee.setFirstName("employee5");
         employee.setLastName("lastname5");
+        employee.setNew(true);
+
         Mono<Employee> savedEmployee = employeeRepository.save(employee);
 
         StepVerifier.create(savedEmployee)
+                .expectNextMatches(savedEntity -> savedEntity.getId() != null)
                 .verifyComplete();
     }
 
