@@ -12,6 +12,8 @@ import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 public class R2DBCConfiguration {
 
     // See https://www.baeldung.com/spring-r2dbc-flyway
+    // The initialization bean of R2DBC needs to be added as a configuration since we need Spring to build the schema
+    // from a specific SQL files
     @Bean
     public ConnectionFactoryInitializer initializer(ConnectionFactory connectionFactory) {
 
