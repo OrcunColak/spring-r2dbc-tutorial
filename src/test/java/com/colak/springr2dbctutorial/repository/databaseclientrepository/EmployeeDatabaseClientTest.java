@@ -1,6 +1,7 @@
-package com.colak.springr2dbctutorial.repository;
+package com.colak.springr2dbctutorial.repository.databaseclientrepository;
 
 import com.colak.springr2dbctutorial.jpa.Employee;
+import com.colak.springr2dbctutorial.repository.databaseclientrepository.EmployeeDatabaseClientRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

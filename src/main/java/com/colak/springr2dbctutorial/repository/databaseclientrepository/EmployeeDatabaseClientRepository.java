@@ -1,4 +1,4 @@
-package com.colak.springr2dbctutorial.repository;
+package com.colak.springr2dbctutorial.repository.databaseclientrepository;
 
 import com.colak.springr2dbctutorial.jpa.Employee;
 import lombok.RequiredArgsConstructor;

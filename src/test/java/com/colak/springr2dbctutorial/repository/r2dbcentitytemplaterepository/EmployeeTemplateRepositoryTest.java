@@ -1,6 +1,7 @@
-package com.colak.springr2dbctutorial.repository;
+package com.colak.springr2dbctutorial.repository.r2dbcentitytemplaterepository;
 
 import com.colak.springr2dbctutorial.jpa.Employee;
+import com.colak.springr2dbctutorial.repository.r2dbcentitytemplaterepository.EmployeeTemplateRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

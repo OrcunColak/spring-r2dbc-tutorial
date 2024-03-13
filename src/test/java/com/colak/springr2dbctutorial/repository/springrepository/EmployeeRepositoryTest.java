@@ -1,9 +1,10 @@
-package com.colak.springr2dbctutorial.repository;
+package com.colak.springr2dbctutorial.repository.springrepository;
 
 import com.colak.springr2dbctutorial.jpa.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Limit;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
@@ -43,6 +44,24 @@ class EmployeeRepositoryTest {
     }
 
     @Test
+    void findByLastname() {
+        Flux<Employee> employeeFlux = employeeRepository.findByLastName("lastname1");
+
+        StepVerifier.create(employeeFlux)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+    @Test
+    void findByLastnameWithLimit() {
+        Flux<Employee> employeeFlux = employeeRepository.findByLastName("lastname1", Limit.of(2));
+
+        StepVerifier.create(employeeFlux)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+
+
+    @Test
     void deleteById() {
         Mono<Void> numberOfRows = employeeRepository.deleteById(1);
 
@@ -68,9 +87,9 @@ class EmployeeRepositoryTest {
     @Test
     void update() {
         Employee employee = new Employee();
-        employee.setId(1);
-        employee.setFirstName("employee11");
-        employee.setLastName("lastname11");
+        employee.setId(3);
+        employee.setFirstName("employee33");
+        employee.setLastName("lastname33");
         Mono<Employee> updatedEmployee = employeeRepository.save(employee);
 
         StepVerifier.create(updatedEmployee)
